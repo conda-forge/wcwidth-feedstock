@@ -5,7 +5,7 @@ Home: https://github.com/jquast/wcwidth
 
 Package license: MIT License
 
-Feedstock license: BSD
+Feedstock license: BSD 3-Clause
 
 Summary: Measures number of Terminal column cells of wide-character codes
 
@@ -69,9 +69,15 @@ Terminology
 
 Current build status
 ====================
+
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/wcwidth-feedstock.svg?style=svg)](https://circleci.com/gh/conda-forge/wcwidth-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/wcwidth-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/wcwidth-feedstock) 
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/wcwidth-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/wcwidth-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/wcwidth/badges/version.svg)](https://anaconda.org/conda-forge/wcwidth)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/wcwidth/badges/downloads.svg)](https://anaconda.org/conda-forge/wcwidth)
 
 
 Updating wcwidth-feedstock
