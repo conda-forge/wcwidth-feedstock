@@ -11,6 +11,18 @@ Summary: Measures number of Terminal column cells of wide-character codes.
 
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/wcwidth-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/wcwidth-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/wcwidth-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/wcwidth-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/wcwidth-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/wcwidth-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/wcwidth/badges/version.svg)](https://anaconda.org/conda-forge/wcwidth)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/wcwidth/badges/downloads.svg)](https://anaconda.org/conda-forge/wcwidth)
+
 Installing wcwidth
 ==================
 
@@ -31,7 +43,6 @@ It is possible to list all of the versions of `wcwidth` available on your platfo
 ```
 conda search wcwidth --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -67,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/wcwidth-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/wcwidth-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/wcwidth-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/wcwidth-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/wcwidth-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/wcwidth-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/wcwidth/badges/version.svg)](https://anaconda.org/conda-forge/wcwidth)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/wcwidth/badges/downloads.svg)](https://anaconda.org/conda-forge/wcwidth)
 
 
 Updating wcwidth-feedstock
