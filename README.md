@@ -14,14 +14,15 @@ Summary: Measures number of Terminal column cells of wide-character codes.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/wcwidth-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/wcwidth-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/wcwidth-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/wcwidth-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/wcwidth-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/wcwidth-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/wcwidth-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/wcwidth-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/wcwidth/badges/version.svg)](https://anaconda.org/conda-forge/wcwidth)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/wcwidth/badges/downloads.svg)](https://anaconda.org/conda-forge/wcwidth)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-wcwidth-green.svg)](https://anaconda.org/conda-forge/wcwidth) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/wcwidth.svg)](https://anaconda.org/conda-forge/wcwidth) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/wcwidth.svg)](https://anaconda.org/conda-forge/wcwidth) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/wcwidth.svg)](https://anaconda.org/conda-forge/wcwidth) |
 
 Installing wcwidth
 ==================
@@ -66,6 +67,7 @@ To manage the continuous integration and simplify feedstock maintenance
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
+For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
