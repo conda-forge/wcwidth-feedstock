@@ -9,7 +9,7 @@ source:
   sha256: f28b3e8a6483e5d49e7f8949ac1a78314e740333ae305b4ba5defd3e74fb37a8
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
@@ -28,7 +28,6 @@ test:
 about:
   home: https://github.com/jquast/wcwidth
   license: MIT
-  license_file: LICENSE.txt
   license_file: LICENSE.txt
   summary: 'Measures number of Terminal column cells of wide-character codes.'
 
