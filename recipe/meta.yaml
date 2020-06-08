@@ -1,4 +1,4 @@
-{% set version = "0.2.3" %}
+{% set version = "0.2.4" %}
 
 package:
   name: wcwidth
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/w/wcwidth/wcwidth-{{ version }}.tar.gz
-  sha256: edbc2b718b4db6cdf393eefe3a420183947d6aa312505ce6754516f458ff8830
+  sha256: 8c6b5b6ee1360b842645f336d9e5d68c55817c26d3050f46b235ef2bc650e48f
 
 build:
   number: 0
