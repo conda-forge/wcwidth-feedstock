@@ -5,7 +5,7 @@ Home: https://github.com/jquast/wcwidth
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Measures number of Terminal column cells of wide-character codes.
 
