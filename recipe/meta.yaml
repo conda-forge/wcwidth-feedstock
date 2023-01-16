@@ -1,4 +1,4 @@
-{% set version = "0.2.5" %}
+{% set version = "0.2.6" %}
 
 package:
   name: wcwidth
@@ -6,19 +6,19 @@ package:
 
 source:
   url: https://pypi.io/packages/source/w/wcwidth/wcwidth-{{ version }}.tar.gz
-  sha256: c4d647b99872929fdb7bdcaa4fbe7f01413ed3d98077df798530e5b04f116c83
+  sha256: a5220780a404dbe3353789870978e472cfe477761f06ee55077256e509b156d0
 
 build:
-  number: 2
+  number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
-    - python
+    - python >=3.6
     - backports.functools_lru_cache
 
 test:
