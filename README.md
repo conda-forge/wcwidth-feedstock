@@ -1,11 +1,11 @@
-About wcwidth
-=============
+About wcwidth-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/wcwidth-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/jquast/wcwidth
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/wcwidth-feedstock/blob/main/LICENSE.txt)
 
 Summary: Measures number of Terminal column cells of wide-character codes.
 
