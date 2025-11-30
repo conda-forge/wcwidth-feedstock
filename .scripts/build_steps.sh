@@ -79,8 +79,7 @@ else
     ( endgroup "Inspecting artifacts" ) 2> /dev/null
     ( startgroup "Validating outputs" ) 2> /dev/null
 
-    # Skip validation for rattler-build - validate_recipe_outputs doesn't support recipe.yaml yet
-    command -v validate_recipe_outputs >/dev/null 2>&1 && validate_recipe_outputs "${FEEDSTOCK_NAME}" || echo "validate_recipe_outputs not available (expected with rattler-build)"
+    validate_recipe_outputs "${FEEDSTOCK_NAME}"
 
     ( endgroup "Validating outputs" ) 2> /dev/null
 
