@@ -83,7 +83,12 @@ else
     ( endgroup "Inspecting artifacts" ) 2> /dev/null
     ( startgroup "Validating outputs" ) 2> /dev/null
 
-    validate_recipe_outputs "${FEEDSTOCK_NAME}"
+    # Skip validation for recipe.yaml (rattler-build) - conda-build validator doesn't support it yet
+    if [[ ! -f "${RECIPE_ROOT}/recipe.yaml" ]]; then
+        validate_recipe_outputs "${FEEDSTOCK_NAME}"
+    else
+        echo "Skipping validation for recipe.yaml (not yet supported by conda-build validator)"
+    fi
 
     ( endgroup "Validating outputs" ) 2> /dev/null
 
