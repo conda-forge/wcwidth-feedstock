@@ -7,7 +7,7 @@ Home: https://github.com/jquast/wcwidth
 
 Package license: MIT
 
-Summary: Measures number of Terminal column cells of wide-character codes.
+Summary: Measures the displayed width of unicode strings in a terminal
 
 Current build status
 ====================
