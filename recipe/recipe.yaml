@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.8.5"
+  version: "0.9.1"
 
 package:
   name: wcwidth
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/w/wcwidth/wcwidth-${{ version }}.tar.gz
-  sha256: 720336056169eac7744c5a84165d563cc6f569652615071cbfd575f131e7537f
+  sha256: 5823209b0d43af322ce698c689380d7c15ca31fa8e6e3be8459f27031bef0af5
 
 build:
   number: 0
