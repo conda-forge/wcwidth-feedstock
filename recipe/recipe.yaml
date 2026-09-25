@@ -45,7 +45,9 @@ tests:
         - wcwidth
         - wcwidth._wcwidth_c
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   summary: Measures the displayed width of unicode strings in a terminal
