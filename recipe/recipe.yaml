@@ -12,26 +12,40 @@ source:
   sha256: 5823209b0d43af322ce698c689380d7c15ca31fa8e6e3be8459f27031bef0af5
 
 build:
-  number: 0
-  noarch: python
-  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 1
+  python:
+    version_independent: true
+  script:
+    env:
+      # makes the C extension mandatory instead of silently falling back to pure Python
+      CIBUILDWHEEL: "1"
+    content: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  skip: not (match(python, python_min ~ ".*") and is_abi3)
 
 requirements:
+  build:
+    - ${{ compiler('c') }}
+    - ${{ stdlib("c") }}
+    - if: build_platform != target_platform
+      then:
+        - python
+        - cross-python_${{ target_platform }}
+        - crossenv
   host:
-    - python ${{ python_min }}.*
-    - hatchling
+    - python
+    - python-abi3
     - pip
+    - setuptools
   run:
-    - python >=${{ python_min }}
+    - python
 
 tests:
   - python:
       imports:
         - wcwidth
+        - wcwidth._wcwidth_c
       pip_check: true
-      python_version:
-        - ${{ python_min }}.*
-        - "*"
+      python_version: ${{ python_min }}.*
 
 about:
   summary: Measures the displayed width of unicode strings in a terminal
@@ -42,3 +56,4 @@ about:
 extra:
   recipe-maintainers:
     - ocefpaf
+    - timkpaine
