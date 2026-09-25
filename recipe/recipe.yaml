@@ -48,6 +48,13 @@ tests:
       python_version:
         - ${{ python_min }}.*
         - "*"
+  - requirements:
+      run:
+        - abi3audit
+    script:
+      - if: unix
+        then: abi3audit $SP_DIR/wcwidth/_wcwidth_c.abi3.so -s -v --assume-minimum-abi3 ${{ python_min }}
+        else: abi3audit %SP_DIR%/wcwidth/_wcwidth_c.pyd -s -v --assume-minimum-abi3 ${{ python_min }}
 
 about:
   summary: Measures the displayed width of unicode strings in a terminal
