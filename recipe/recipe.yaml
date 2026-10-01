@@ -16,7 +16,7 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/w/wcwidth/wcwidth-${{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/w/wcwidth/wcwidth-${{ version }}.tar.gz
   sha256: 5823209b0d43af322ce698c689380d7c15ca31fa8e6e3be8459f27031bef0af5
 
 build:
