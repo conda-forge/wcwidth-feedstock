@@ -1,30 +1,39 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/prefix-dev/recipe-format/main/schema.json
 schema_version: 1
 
 context:
   version: "0.9.1"
+  # a known-not-minimum python
+  python_check_max: "3.14"
+  # remove undiscoverable tests
+  unlink_tests: test_check_release.py
+  # skip tests of repo files
+  pytest_k: |-
+    not (cmake_and_setuptools_source_lists_parity or version_matches)
 
 package:
   name: wcwidth
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/w/wcwidth/wcwidth-${{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/w/wcwidth/wcwidth-${{ version }}.tar.gz
   sha256: 5823209b0d43af322ce698c689380d7c15ca31fa8e6e3be8459f27031bef0af5
 
 build:
-  number: 1
+  number: 2
+  skip: is_abi3 and not is_python_min
   python:
-    version_independent: true
+    version_independent: ${{ is_abi3 }}
   script:
     env:
       # makes the C extension mandatory instead of silently falling back to pure Python
       CIBUILDWHEEL: "1"
-    content: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  skip: not (match(python, python_min ~ ".*") and is_abi3)
+    content:
+      - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --check-build-dependencies
 
 requirements:
   build:
-    - ${{ compiler('c') }}
+    - ${{ compiler("c") }}
     - ${{ stdlib("c") }}
     - if: build_platform != target_platform
       then:
@@ -32,35 +41,65 @@ requirements:
         - cross-python_${{ target_platform }}
         - crossenv
   host:
-    - python
-    - python-abi3
     - pip
-    - setuptools
+    - python
+    - setuptools >=61
+    - if: is_abi3
+      then:
+        - python ${{ python_min }}.*
+        - python-abi3
   run:
     - python
+    - if: is_abi3
+      then:
+        - python >=${{ python_min }}
+        - python-abi3
 
 tests:
+  - package_contents:
+      strict: true
+      files:
+        - etc/conda/test-files/wcwidth/**
+      site_packages:
+        - wcwidth/**
+        - wcwidth-${{ version }}.dist-info/**
   - python:
       imports:
         - wcwidth
         - wcwidth._wcwidth_c
       pip_check: true
       python_version:
-        - ${{ python_min }}.*
-        - "*"
-  - requirements:
+        - if: is_abi3
+          then:
+            - ${{ python_min }}.*
+            - ${{ python_check_max }}.*
+          else:
+            - "*"
+  - files:
+      source:
+        - tests/**
+    requirements:
       run:
-        - abi3audit
+        - pytest
+        - if: is_abi3
+          then:
+            - abi3audit
+            - python ${{ python_min }}.*
     script:
-      - if: unix
-        then: abi3audit $SP_DIR/wcwidth/_wcwidth_c.abi3.so -s -v --assume-minimum-abi3 ${{ python_min }}
-        else: abi3audit %SP_DIR%/wcwidth/_wcwidth_c.pyd -s -v --assume-minimum-abi3 ${{ python_min }}
+      - python -c "import os; [os.unlink(f'tests/{p}') for p in '''${{ unlink_tests }}'''.split()]"
+      - pytest -vv --tb=long --color=yes -k "${{ pytest_k }}"
+      - if: is_abi3
+        then:
+          - if: unix
+            then: abi3audit -s -v --assume-minimum-abi3 ${{ python_min }} "${SP_DIR}/wcwidth/_wcwidth_c.abi3.so"
+            else: abi3audit -s -v --assume-minimum-abi3 ${{ python_min }} "%SP_DIR%/wcwidth/_wcwidth_c.pyd"
 
 about:
   summary: Measures the displayed width of unicode strings in a terminal
   license: MIT
   license_file: LICENSE
-  homepage: https://github.com/jquast/wcwidth
+  homepage: https://pypi.org/project/wcwidth
+  repository: https://github.com/jquast/wcwidth
 
 extra:
   recipe-maintainers:
