@@ -5,6 +5,11 @@ context:
   version: "0.9.1"
   # a known-not-minimum python
   python_check_max: "3.14"
+  # remove undiscoverable tests
+  unlink_tests: test_check_release.py
+  # skip tests of repo files
+  pytest_k: |-
+    not (cmake_and_setuptools_source_lists_parity or version_matches)
 
 package:
   name: wcwidth
@@ -38,7 +43,7 @@ requirements:
   host:
     - pip
     - python
-    - setuptools
+    - setuptools >=61
     - if: is_abi3
       then:
         - python ${{ python_min }}.*
@@ -53,6 +58,8 @@ requirements:
 tests:
   - package_contents:
       strict: true
+      files:
+        - etc/conda/test-files/wcwidth/**
       site_packages:
         - wcwidth/**
         - wcwidth-${{ version }}.dist-info/**
@@ -68,12 +75,19 @@ tests:
             - ${{ python_check_max }}.*
           else:
             - "*"
-  - requirements:
+  - files:
+      source:
+        - tests/**
+    requirements:
       run:
+        - pytest
         - if: is_abi3
           then:
             - abi3audit
+            - python ${{ python_min }}.*
     script:
+      - python -c "import os; [os.unlink(f'tests/{p}') for p in '''${{ unlink_tests }}'''.split()]"
+      - pytest -vv --tb=long --color=yes -k "${{ pytest_k }}"
       - if: is_abi3
         then:
           - if: unix
