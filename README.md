@@ -3,11 +3,13 @@ About wcwidth-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/wcwidth-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/jquast/wcwidth
+Home: https://pypi.org/project/wcwidth
 
 Package license: MIT
 
 Summary: Measures the displayed width of unicode strings in a terminal
+
+Development: https://github.com/jquast/wcwidth
 
 Current build status
 ====================
@@ -34,10 +36,31 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>osx_64_python3.11.____cpython</td>
+              <td>osx_64_is_abi3falsepython3.14.____cp314t</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4971&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/wcwidth-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_python3.11.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/wcwidth-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_is_abi3falsepython3.14.____cp314t" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_is_abi3truepython3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4971&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/wcwidth-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_is_abi3truepython3.11.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_is_abi3falsepython3.14.____cp314t</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4971&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/wcwidth-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_is_abi3falsepython3.14.____cp314t" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_is_abi3truepython3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4971&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/wcwidth-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_is_abi3truepython3.11.____cpython" alt="variant">
                 </a>
               </td>
             </tr>

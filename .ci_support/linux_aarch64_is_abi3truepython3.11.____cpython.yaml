@@ -11,8 +11,10 @@ channel_sources:
 channel_targets:
 - conda-forge main
 docker_image:
-- quay.io/condaforge/linux-anvil-x86_64:alma10
+- quay.io/condaforge/linux-anvil-aarch64:alma10
 is_abi3:
+- true
+is_python_min:
 - true
 pin_run_as_build:
   python:
@@ -24,3 +26,7 @@ python_min:
 - '3.11'
 target_platform:
 - linux-aarch64
+zip_keys:
+- - python
+  - is_python_min
+  - is_abi3

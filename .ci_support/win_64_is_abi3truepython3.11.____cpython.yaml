@@ -8,13 +8,19 @@ channel_targets:
 - conda-forge main
 is_abi3:
 - true
+is_python_min:
+- true
 pin_run_as_build:
   python:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.14.* *_cp314
+- 3.11.* *_cpython
 python_min:
-- '3.14'
+- '3.11'
 target_platform:
-- win-arm64
+- win-64
+zip_keys:
+- - python
+  - is_python_min
+  - is_abi3
