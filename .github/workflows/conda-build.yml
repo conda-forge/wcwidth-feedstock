@@ -22,7 +22,7 @@ jobs:
       max-parallel: 50
       matrix:
         include:
-          - CONFIG: linux_64_is_abi3falsepython3.14.____cp314t
+          - CONFIG: linux_64_channel_sourcesconda-forgeis_abi3falsepython3.14.____cp314t
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: False
             UPLOAD_PACKAGES: True
@@ -34,7 +34,7 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_is_abi3truepython3.11.____cpython
+          - CONFIG: linux_64_channel_sourcesconda-forgeis_abi3truepython3.11.____cpython
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: False
             UPLOAD_PACKAGES: True
@@ -46,7 +46,7 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_is_abi3falsepython3.14.____cp314t
+          - CONFIG: linux_aarch64_channel_sourcesconda-forgeis_abi3falsepython3.14.____cp314t
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: False
             UPLOAD_PACKAGES: True
@@ -58,7 +58,7 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_is_abi3truepython3.11.____cpython
+          - CONFIG: linux_aarch64_channel_sourcesconda-forgeis_abi3truepython3.11.____cpython
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: False
             UPLOAD_PACKAGES: True
@@ -70,7 +70,7 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_ppc64le_is_abi3falsepython3.14.____cp314t
+          - CONFIG: linux_ppc64le_channel_sourcesconda-forgeis_abi3falsepython3.14.____cp314t
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-ppc64le:alma10
             STORE_BUILD_ARTIFACTS: False
             UPLOAD_PACKAGES: True
@@ -82,7 +82,7 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_ppc64le_is_abi3truepython3.11.____cpython
+          - CONFIG: linux_ppc64le_channel_sourcesconda-forgeis_abi3truepython3.11.____cpython
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-ppc64le:alma10
             STORE_BUILD_ARTIFACTS: False
             UPLOAD_PACKAGES: True
@@ -94,7 +94,7 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_riscv64_is_abi3falsepython3.14.____cp314t
+          - CONFIG: linux_riscv64_channel_sourcesconda-forgeis_abi3falsepython3.14.____cp314t
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-riscv64:rocky10
             STORE_BUILD_ARTIFACTS: False
             UPLOAD_PACKAGES: True
@@ -106,7 +106,7 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-riscv']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_riscv64_is_abi3truepython3.14.____cp314
+          - CONFIG: linux_riscv64_channel_sourcesconda-forgeis_abi3truepython3.14.____cp314
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-riscv64:rocky10
             STORE_BUILD_ARTIFACTS: False
             UPLOAD_PACKAGES: True
@@ -118,7 +118,7 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-riscv']
             tools_install_dir: ~/miniforge3
-          - CONFIG: win_64_is_abi3falsepython3.14.____cp314t
+          - CONFIG: win_64_channel_sourcesconda-forgeis_abi3falsepython3.14.____cp314t
             STORE_BUILD_ARTIFACTS: False
             UPLOAD_PACKAGES: True
             build_platform: win-64
@@ -130,7 +130,7 @@ jobs:
             resize_partitions: False
             runs_on: ['windows-2022']
             tools_install_dir: D:\Miniforge
-          - CONFIG: win_64_is_abi3truepython3.11.____cpython
+          - CONFIG: win_64_channel_sourcesconda-forgeis_abi3truepython3.11.____cpython
             STORE_BUILD_ARTIFACTS: False
             UPLOAD_PACKAGES: True
             build_platform: win-64
@@ -142,7 +142,7 @@ jobs:
             resize_partitions: False
             runs_on: ['windows-2022']
             tools_install_dir: D:\Miniforge
-          - CONFIG: win_arm64_is_abi3falsepython3.14.____cp314t
+          - CONFIG: win_arm64_channel_sourcesconda-forgeis_abi3falsepython3.14.____cp314t
             STORE_BUILD_ARTIFACTS: False
             UPLOAD_PACKAGES: True
             build_platform: win-arm64
@@ -154,7 +154,7 @@ jobs:
             resize_partitions: False
             runs_on: ['windows-11-arm']
             tools_install_dir: C:\Miniforge
-          - CONFIG: win_arm64_is_abi3truepython3.14.____cp314
+          - CONFIG: win_arm64_channel_sourcesconda-forgeis_abi3truepython3.14.____cp314
             STORE_BUILD_ARTIFACTS: False
             UPLOAD_PACKAGES: True
             build_platform: win-arm64
