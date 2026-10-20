@@ -23,5 +23,4 @@ target_platform:
 zip_keys:
 - - python
   - is_python_min
-  - channel_sources
   - is_abi3
