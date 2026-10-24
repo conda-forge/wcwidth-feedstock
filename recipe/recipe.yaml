@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "0.9.3"
+  version: "0.9.4"
   # a known-not-minimum python
   python_check_max: "3.14"
   # remove undiscoverable tests
@@ -17,7 +17,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/w/wcwidth/wcwidth-${{ version }}.tar.gz
-  sha256: dfe7cfbd4cb59db9fe0931bd6091ab4a95b3acc5d56bfb50fa9fef0ccba5dc5c
+  sha256: fd8d57d3cdfe570e3265c8fab1885c24e34ef40889c0759c0c304a19e9835954
 
 build:
   number: 0
