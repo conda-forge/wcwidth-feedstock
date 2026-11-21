@@ -5,7 +5,7 @@
 
 [workspace]
 name = "wcwidth-feedstock"
-version = "2026.10.24"  # conda-smithy version used to generate this file
+version = "2026.11.6"  # conda-smithy version used to generate this file
 description = "Pixi configuration for conda-forge/wcwidth-feedstock"
 authors = ["@conda-forge/wcwidth"]
 channels = ["conda-forge"]
@@ -29,6 +29,7 @@ description = "Lint the feedstock recipe"
 [feature.build.dependencies]
 conda-build = ">=26.3"
 conda-forge-ci-setup = "4.*"
+python = "3.14.*"
 rattler-build = "*"
 
 [feature.build.tasks.inspect-all]
@@ -46,6 +47,15 @@ description = "Debug wcwidth-feedstock with variant linux_64_is_abi3falsepython3
 [feature.build.tasks."inspect-linux_64_is_abi3falsepython3.14.____cp314t"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_is_abi3falsepython3.14.____cp314t.yaml"
 description = "List contents of wcwidth-feedstock packages built for variant linux_64_is_abi3falsepython3.14.____cp314t"
+[feature.build.tasks."build-linux_64_is_abi3falsepython3.15.____cp315t"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_is_abi3falsepython3.15.____cp315t.yaml --target-platform linux-64"
+description = "Build wcwidth-feedstock with variant linux_64_is_abi3falsepython3.15.____cp315t directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_is_abi3falsepython3.15.____cp315t"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_is_abi3falsepython3.15.____cp315t.yaml --target-platform linux-64"
+description = "Debug wcwidth-feedstock with variant linux_64_is_abi3falsepython3.15.____cp315t directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_is_abi3falsepython3.15.____cp315t"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_is_abi3falsepython3.15.____cp315t.yaml"
+description = "List contents of wcwidth-feedstock packages built for variant linux_64_is_abi3falsepython3.15.____cp315t"
 [feature.build.tasks."build-linux_64_is_abi3truepython3.11.____cpython"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_is_abi3truepython3.11.____cpython.yaml --target-platform linux-64"
 description = "Build wcwidth-feedstock with variant linux_64_is_abi3truepython3.11.____cpython directly (without setup scripts)"
@@ -64,6 +74,15 @@ description = "Debug wcwidth-feedstock with variant linux_aarch64_is_abi3falsepy
 [feature.build.tasks."inspect-linux_aarch64_is_abi3falsepython3.14.____cp314t"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_is_abi3falsepython3.14.____cp314t.yaml"
 description = "List contents of wcwidth-feedstock packages built for variant linux_aarch64_is_abi3falsepython3.14.____cp314t"
+[feature.build.tasks."build-linux_aarch64_is_abi3falsepython3.15.____cp315t"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_is_abi3falsepython3.15.____cp315t.yaml --target-platform linux-aarch64"
+description = "Build wcwidth-feedstock with variant linux_aarch64_is_abi3falsepython3.15.____cp315t directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_is_abi3falsepython3.15.____cp315t"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_is_abi3falsepython3.15.____cp315t.yaml --target-platform linux-aarch64"
+description = "Debug wcwidth-feedstock with variant linux_aarch64_is_abi3falsepython3.15.____cp315t directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_is_abi3falsepython3.15.____cp315t"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_is_abi3falsepython3.15.____cp315t.yaml"
+description = "List contents of wcwidth-feedstock packages built for variant linux_aarch64_is_abi3falsepython3.15.____cp315t"
 [feature.build.tasks."build-linux_aarch64_is_abi3truepython3.11.____cpython"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_is_abi3truepython3.11.____cpython.yaml --target-platform linux-aarch64"
 description = "Build wcwidth-feedstock with variant linux_aarch64_is_abi3truepython3.11.____cpython directly (without setup scripts)"
@@ -82,6 +101,15 @@ description = "Debug wcwidth-feedstock with variant linux_ppc64le_is_abi3falsepy
 [feature.build.tasks."inspect-linux_ppc64le_is_abi3falsepython3.14.____cp314t"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_ppc64le_is_abi3falsepython3.14.____cp314t.yaml"
 description = "List contents of wcwidth-feedstock packages built for variant linux_ppc64le_is_abi3falsepython3.14.____cp314t"
+[feature.build.tasks."build-linux_ppc64le_is_abi3falsepython3.15.____cp315t"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_ppc64le_is_abi3falsepython3.15.____cp315t.yaml --target-platform linux-ppc64le"
+description = "Build wcwidth-feedstock with variant linux_ppc64le_is_abi3falsepython3.15.____cp315t directly (without setup scripts)"
+[feature.build.tasks."debug-linux_ppc64le_is_abi3falsepython3.15.____cp315t"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_ppc64le_is_abi3falsepython3.15.____cp315t.yaml --target-platform linux-ppc64le"
+description = "Debug wcwidth-feedstock with variant linux_ppc64le_is_abi3falsepython3.15.____cp315t directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_ppc64le_is_abi3falsepython3.15.____cp315t"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_ppc64le_is_abi3falsepython3.15.____cp315t.yaml"
+description = "List contents of wcwidth-feedstock packages built for variant linux_ppc64le_is_abi3falsepython3.15.____cp315t"
 [feature.build.tasks."build-linux_ppc64le_is_abi3truepython3.11.____cpython"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/linux_ppc64le_is_abi3truepython3.11.____cpython.yaml --target-platform linux-ppc64le"
 description = "Build wcwidth-feedstock with variant linux_ppc64le_is_abi3truepython3.11.____cpython directly (without setup scripts)"
@@ -100,6 +128,15 @@ description = "Debug wcwidth-feedstock with variant linux_riscv64_is_abi3falsepy
 [feature.build.tasks."inspect-linux_riscv64_is_abi3falsepython3.14.____cp314t"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_riscv64_is_abi3falsepython3.14.____cp314t.yaml"
 description = "List contents of wcwidth-feedstock packages built for variant linux_riscv64_is_abi3falsepython3.14.____cp314t"
+[feature.build.tasks."build-linux_riscv64_is_abi3falsepython3.15.____cp315t"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_riscv64_is_abi3falsepython3.15.____cp315t.yaml --target-platform linux-riscv64"
+description = "Build wcwidth-feedstock with variant linux_riscv64_is_abi3falsepython3.15.____cp315t directly (without setup scripts)"
+[feature.build.tasks."debug-linux_riscv64_is_abi3falsepython3.15.____cp315t"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_riscv64_is_abi3falsepython3.15.____cp315t.yaml --target-platform linux-riscv64"
+description = "Debug wcwidth-feedstock with variant linux_riscv64_is_abi3falsepython3.15.____cp315t directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_riscv64_is_abi3falsepython3.15.____cp315t"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_riscv64_is_abi3falsepython3.15.____cp315t.yaml"
+description = "List contents of wcwidth-feedstock packages built for variant linux_riscv64_is_abi3falsepython3.15.____cp315t"
 [feature.build.tasks."build-linux_riscv64_is_abi3truepython3.14.____cp314"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/linux_riscv64_is_abi3truepython3.14.____cp314.yaml --target-platform linux-riscv64"
 description = "Build wcwidth-feedstock with variant linux_riscv64_is_abi3truepython3.14.____cp314 directly (without setup scripts)"
@@ -118,6 +155,15 @@ description = "Debug wcwidth-feedstock with variant osx_64_is_abi3falsepython3.1
 [feature.build.tasks."inspect-osx_64_is_abi3falsepython3.14.____cp314t"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_is_abi3falsepython3.14.____cp314t.yaml"
 description = "List contents of wcwidth-feedstock packages built for variant osx_64_is_abi3falsepython3.14.____cp314t"
+[feature.build.tasks."build-osx_64_is_abi3falsepython3.15.____cp315t"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_is_abi3falsepython3.15.____cp315t.yaml --target-platform osx-64"
+description = "Build wcwidth-feedstock with variant osx_64_is_abi3falsepython3.15.____cp315t directly (without setup scripts)"
+[feature.build.tasks."debug-osx_64_is_abi3falsepython3.15.____cp315t"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_is_abi3falsepython3.15.____cp315t.yaml --target-platform osx-64"
+description = "Debug wcwidth-feedstock with variant osx_64_is_abi3falsepython3.15.____cp315t directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_64_is_abi3falsepython3.15.____cp315t"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_is_abi3falsepython3.15.____cp315t.yaml"
+description = "List contents of wcwidth-feedstock packages built for variant osx_64_is_abi3falsepython3.15.____cp315t"
 [feature.build.tasks."build-osx_64_is_abi3truepython3.11.____cpython"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_is_abi3truepython3.11.____cpython.yaml --target-platform osx-64"
 description = "Build wcwidth-feedstock with variant osx_64_is_abi3truepython3.11.____cpython directly (without setup scripts)"
@@ -136,6 +182,15 @@ description = "Debug wcwidth-feedstock with variant osx_arm64_is_abi3falsepython
 [feature.build.tasks."inspect-osx_arm64_is_abi3falsepython3.14.____cp314t"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_is_abi3falsepython3.14.____cp314t.yaml"
 description = "List contents of wcwidth-feedstock packages built for variant osx_arm64_is_abi3falsepython3.14.____cp314t"
+[feature.build.tasks."build-osx_arm64_is_abi3falsepython3.15.____cp315t"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_is_abi3falsepython3.15.____cp315t.yaml --target-platform osx-arm64"
+description = "Build wcwidth-feedstock with variant osx_arm64_is_abi3falsepython3.15.____cp315t directly (without setup scripts)"
+[feature.build.tasks."debug-osx_arm64_is_abi3falsepython3.15.____cp315t"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_is_abi3falsepython3.15.____cp315t.yaml --target-platform osx-arm64"
+description = "Debug wcwidth-feedstock with variant osx_arm64_is_abi3falsepython3.15.____cp315t directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_arm64_is_abi3falsepython3.15.____cp315t"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_is_abi3falsepython3.15.____cp315t.yaml"
+description = "List contents of wcwidth-feedstock packages built for variant osx_arm64_is_abi3falsepython3.15.____cp315t"
 [feature.build.tasks."build-osx_arm64_is_abi3truepython3.11.____cpython"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_is_abi3truepython3.11.____cpython.yaml --target-platform osx-arm64"
 description = "Build wcwidth-feedstock with variant osx_arm64_is_abi3truepython3.11.____cpython directly (without setup scripts)"
@@ -154,6 +209,15 @@ description = "Debug wcwidth-feedstock with variant win_64_is_abi3falsepython3.1
 [feature.build.tasks."inspect-win_64_is_abi3falsepython3.14.____cp314t"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_is_abi3falsepython3.14.____cp314t.yaml"
 description = "List contents of wcwidth-feedstock packages built for variant win_64_is_abi3falsepython3.14.____cp314t"
+[feature.build.tasks."build-win_64_is_abi3falsepython3.15.____cp315t"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_is_abi3falsepython3.15.____cp315t.yaml --target-platform win-64"
+description = "Build wcwidth-feedstock with variant win_64_is_abi3falsepython3.15.____cp315t directly (without setup scripts)"
+[feature.build.tasks."debug-win_64_is_abi3falsepython3.15.____cp315t"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/win_64_is_abi3falsepython3.15.____cp315t.yaml --target-platform win-64"
+description = "Debug wcwidth-feedstock with variant win_64_is_abi3falsepython3.15.____cp315t directly (without setup scripts)"
+[feature.build.tasks."inspect-win_64_is_abi3falsepython3.15.____cp315t"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_is_abi3falsepython3.15.____cp315t.yaml"
+description = "List contents of wcwidth-feedstock packages built for variant win_64_is_abi3falsepython3.15.____cp315t"
 [feature.build.tasks."build-win_64_is_abi3truepython3.11.____cpython"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_is_abi3truepython3.11.____cpython.yaml --target-platform win-64"
 description = "Build wcwidth-feedstock with variant win_64_is_abi3truepython3.11.____cpython directly (without setup scripts)"
@@ -172,6 +236,15 @@ description = "Debug wcwidth-feedstock with variant win_arm64_is_abi3falsepython
 [feature.build.tasks."inspect-win_arm64_is_abi3falsepython3.14.____cp314t"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_arm64_is_abi3falsepython3.14.____cp314t.yaml"
 description = "List contents of wcwidth-feedstock packages built for variant win_arm64_is_abi3falsepython3.14.____cp314t"
+[feature.build.tasks."build-win_arm64_is_abi3falsepython3.15.____cp315t"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/win_arm64_is_abi3falsepython3.15.____cp315t.yaml --target-platform win-arm64"
+description = "Build wcwidth-feedstock with variant win_arm64_is_abi3falsepython3.15.____cp315t directly (without setup scripts)"
+[feature.build.tasks."debug-win_arm64_is_abi3falsepython3.15.____cp315t"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/win_arm64_is_abi3falsepython3.15.____cp315t.yaml --target-platform win-arm64"
+description = "Debug wcwidth-feedstock with variant win_arm64_is_abi3falsepython3.15.____cp315t directly (without setup scripts)"
+[feature.build.tasks."inspect-win_arm64_is_abi3falsepython3.15.____cp315t"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_arm64_is_abi3falsepython3.15.____cp315t.yaml"
+description = "List contents of wcwidth-feedstock packages built for variant win_arm64_is_abi3falsepython3.15.____cp315t"
 [feature.build.tasks."build-win_arm64_is_abi3truepython3.14.____cp314"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/win_arm64_is_abi3truepython3.14.____cp314.yaml --target-platform win-arm64"
 description = "Build wcwidth-feedstock with variant win_arm64_is_abi3truepython3.14.____cp314 directly (without setup scripts)"
